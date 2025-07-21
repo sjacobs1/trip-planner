@@ -1,9 +1,15 @@
-// import './App.css'
+import "./App.css";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Layout from './components/Layout'
+
+const queryClient = new QueryClient()
 
 function App() {
   return (
-    <p>can you see this text?</p>
-  );
+    <QueryClientProvider client={queryClient}>
+      <Layout />
+    </QueryClientProvider>
+  )
 }
 
-export default App;
+export default App

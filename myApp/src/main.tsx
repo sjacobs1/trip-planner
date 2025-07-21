@@ -7,6 +7,7 @@ import LandingPage from "./components/LandingPage.tsx";
 import DiscoverPlaces from "./components/DiscoverPlacesPage.tsx";
 import PlanTripPage from "./components/PlanTripPage.tsx";
 import MyTripsPage from "./components/MyTripsPage.tsx";
+import NotFoundPage from "./components/NotFoundErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       { path: "planTripPage", element: <PlanTripPage /> },
       { path: "myTripsPage", element: <MyTripsPage /> },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ]);
 
